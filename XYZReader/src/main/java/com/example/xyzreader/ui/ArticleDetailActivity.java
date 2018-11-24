@@ -48,8 +48,9 @@ implements LoaderManager.LoaderCallbacks<Cursor> {
                             View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
         }
         setContentView(R.layout.activity_article_detail);
-
-        ((Toolbar) findViewById(R.id.toolbar)).setTitle(getResources().getString(R.string.app_name));
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        toolbar.setTitle(getResources().getString(R.string.app_name));
+        setSupportActionBar(toolbar);
         findViewById(R.id.fab).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
